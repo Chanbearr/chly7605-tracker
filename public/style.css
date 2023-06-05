@@ -1,0 +1,330 @@
+body{
+    background: #c2c2bd
+}
+
+.container {
+    background-color: #282828;
+    color: white;
+    width: 50%;
+    min-height: 100vh;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 70px;
+    padding: 1em 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-family: Didot;
+}
+
+header > h1 {
+    text-align: left;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main section {
+    width: 100%;
+    background-color: #282828;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    max-width: 500px;
+}
+
+form {
+    margin: 0 auto;
+    border: 1px solid grey;
+    padding: 1em;
+    border-radius: 20px;
+    color: white;
+    width: 100%;
+    height: 50%;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.form-row > label {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.form-row > input,
+.form-row > select {
+    padding: .5em;
+    flex-grow: 1; 
+    border-radius: 10px;
+    border: none;
+}
+
+.button {
+    display: flex;
+    border-radius: 10px;
+}
+
+#rightSection {
+    color: black;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    position: absolute;
+    margin-top: 20px;
+    padding-right: 20px;
+    top: 0;
+    right: 20px;
+}
+
+#rightSection .right-content {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#rightSection .right-content > h3 {
+    margin: 10px 0 0 10px;
+    text-align: right;
+}
+
+#rightSection li {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#rightSection .right-content{
+    margin-top: 20px;
+    text-align: left;
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+}
+
+#rightSection .right-content > h3 {
+    margin: 10px 0 0 10px;
+}
+
+#rightSection li p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#rightSection li span {
+    font-size: 16px;
+}
+
+.task-container {
+    position: relative;
+    color: white;
+}
+
+.delete-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#submitBtn {
+    background-color: white;
+    border-radius: 10px;
+    width: 100px;
+    border: none;
+    padding: 10px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#rightSection {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px){
+    .container {
+        width: 100%;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    main {
+        order: 1;
+        padding: 10px;
+    }
+
+    #rightSection {
+        position: fixed;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        color: black;
+        margin-top: 0;
+        overflow-y: scroll;
+    }
+
+    #rightSection h3 {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .task-container {
+        position: relative;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        padding: 30px;
+        margin-bottom: 30px;
+        color: white;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+    #rightSection {
+        position: fixed;
+        top: 0;
+        right: 5px;
+        bottom: 0;
+        width: 50%;
+        overflow-y: scroll;
+    }
+}
+
+.genre {
+    display: inline-block;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #888;
+    margin-top: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #888;
+    margin: 10% auto;
+    padding: 20px;
+    border: none;
+    width: 50%;
+    max-width: 600px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-modal {
+    background: white;
+    border: none;
+    border-radius: 10px;
+    color: #707070;
+    padding: 10px;
+    width: 100px;
+    margin: 0;
+}
+
+.emoji-container{
+    display: flex;
+    align-items: center;
+}
+
+.emoji-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.emoji-option input[type="radio"]{
+    display: none;
+}
+
+.emoji-option .emoji {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border: 1px solid transparent;
+    margin-bottom: 5px;
+}
+
+.emoji-option input[type="radio"]:checked + .emoji {
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.emoji-option .emoji:hover {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.selected-emoji {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+

@@ -1,13 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Hello, world!</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="" />
-  <link rel="icon" href="favicon.png">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Song Tracker</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
 </head>
+
+<!--Form Section-->
 <body>
-  <h1>Hello, world!</h1>
+  <div class="container">
+ <header>
+  <h1>TunesMe</h1>
+ </header>
+<main>
+<section> <!-- Developing a form section and container to hold the form submission for the name of the song, artist name and genre of the song-->
+<form id="songTracker" action="#">
+    <h2>Add Songs</h2>
+    <h3>Add new songs below</h3>
+    <div class="form-row">
+        <label for="taskName">Name</label> 
+        <input type="text" name="taskName" id="taskName" required="true"/> <!--Input field for the name of song-->
+    </div>
+    <div class="form-row">
+        <label for="taskArtist">Artist</label>
+        <input type="text" name="taskArtist" id="taskArtist" required="true"/> <!--Adding the input section for the name of the song-->
+    </div>
+    <div class="form-row">
+        <label for="taskGenre">Genre</label> 
+        <select id="taskGenre" name="taskGenre" required="true"> <!--Dropdown bar for selecting the genre of the song-->
+            <option value="">Select one</option>
+            <option value="Alternative">Alternative</option>
+            <option value="Ambient">Ambient</option>
+            <option value="Classical">Classical</option>
+            <option value="Country">Country</option>
+            <option value="Hip Hop">Hip Hop</option>
+            <option value="House">House</option>
+            <option value="Indie">Indie</option>
+            <option value="Jazz">Jazz</option>
+            <option value="Metal">Metal</option>
+            <option value="Opera">Opera</option>
+            <option value="Pop">Pop</option>
+            <option value="Rap">Rap</option>
+            <option value="Rock">Rock</option>
+            <option value="Rhythmn and Blues">Rhythmn and Blues</option>
+            <option value="Techno">Techno</option>
+        </select> <!--Creating option values for genre names, in alphabetical order for an easy read-->
+    </div>
+    <div class="form-row">
+        <button type="submit" id="submitBtn">Submit</button> <!--Submit button for the form submission-->
+    </div>
+</form>
+</section>
+</main>
+</div>
+
+<!--Modal Pop Up-->
+<section>
+  <div id="moodModal" class="modal">
+    <div id="modalContent" class="modal-content"> <!--Section for modal content-->
+    <h2>What is the song mood?</h2>
+    <div class="emoji-container">
+      <label class="emoji-option"> <!--Selection of emojis-->
+        <input type="radio" name="emoji" value="sad">
+      <span class="emoji">😢</span>
+      <span class="emoji-mood">Sad</span>
+      </label>
+      <label class="emoji-option">
+        <input type="radio" name="emoji" value="relaxed">
+        <span class="emoji">😌</span>
+        <span class="emoji-mood">Relaxed</span>
+      </label>
+      <label class="emoji-option">
+         <input type="radio" name="emoji" value="quirky">
+         <span class="emoji">😜</span>
+         <span class="emoji-mood">Quirky</span>
+      </label>
+      <label class="emoji-option">
+        <input type="radio" name="emoji" value="happy">
+        <span class="emoji">😊</span>
+        <span class="emoji-mood">Happy</span>
+      </label>
+      <label class="emoji-option">
+        <input type="radio" name="emoji" value="superb">
+      <span class="emoji">😃</span>
+      <span class="emoji-mood">Superb</span>
+    </label>
+  </div>
+  <div class="footer">
+    <button type="submit" class="submit-modal">Submit</button> <!--Submit button for the modal-->
+  </div>
+ </div>
+</div>
+</section>
+
+<!--Right section for form submission data-->
+<aside id="rightSection">
+ <div class="right-content">
+  <ul id="songList"></ul>
+ </div>
+</aside>
+
+   <script src="script.js"></script>
 </body>
+
 </html>
