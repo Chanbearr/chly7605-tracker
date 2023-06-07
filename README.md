@@ -29,15 +29,23 @@ TunesMe is an application designed for users to add songs they have listened to,
 Initially, I only included a form page and list of submitted content. Along the way, I eventually developed the emoji modal worked with the web page.
 ### Version Control
 ### Git
-Throughout this project, Git was utilised to manage my source code and track the progression of the web page development.
+Throughout this project, Git was utilised to manage my source code and track the progression of the web page development. The project was version-controlled by Git which tracked any changes to the code. 
 
+Cloning the repository created a local copy of a remote repository, allowing changes on the code.
 ### Testing 
-- Html checker
-- CSS Checker
+During the the development process of this web page, validation tools were used for the HTML and CSS code. The following tools were used to test this.
+- HTML Validator: HTML code was validated using W3C Markup Validation Service.
+- CSS Validator: CSS code was validated using W3C CSS Validation Servive. 
+Both these tools helps to identify any syntax errors or warnings in your code.
+
+To validate the your code, you can follow these steps:
 
 ## Lessons Learnt
 The importance of seperating different functionalities in the code, which prepares a more cohesive and well developed code. Through the utilisation of html, css, and javascript, it helped develop a further understanding on how front-end and back-end flow together to create a website.
 
+Understanding and learning about event handling and form submissions with button clicks, modal pop up. This shows the importance of interactive elements in a web page.
+
+Learning about responsive designs that need to be considered for creating a web page that enhances user experience with different elements such as changes for different window sizes.
 ## Recommendations for Future Improvement
 Edit funtionality: A function that can allow users to modify the submitted content could be included to allow them to freely edit if they made a mistake.
 

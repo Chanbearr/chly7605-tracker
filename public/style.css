@@ -263,10 +263,7 @@ main {
     border-radius: 10px;
     text-align: center;
     color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
 
 footer {
@@ -276,6 +273,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .submit-modal {
@@ -291,6 +289,8 @@ footer {
 .emoji-container{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .emoji-option {
